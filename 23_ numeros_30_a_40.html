@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<script>
+	// Mostrar os números entre 30 a 40, exceto 33 e 37. No final escreva FIM.
+
+	function mostra(frase){
+
+		document.write(frase);
+		document.write("<br><br>");
+	}
+	
+	contador = 30
+	while(contador <= 40){
+
+		if(contador != 33 && contador != 37){
+			mostra(contador);
+		}
+		
+		contador = contador + 1;
+	}
+
+	mostra("FIM");
+
+</script>

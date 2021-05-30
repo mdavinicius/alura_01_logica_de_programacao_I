@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+<script>
+	// Se a idade média entre uma geração e outra é de 28 anos, quantas gerações temos de 1500 até o ano atual?
+	
+	function pulaLinha(){
+		document.write("<br>")
+	}
+
+	function mostra(idade){
+		document.write("Já se passaram " + idade + " gerações.")
+		pulaLinha()
+
+	}
+
+	anoAtual = prompt("Qual o ano atual?")
+	geracoes = Math.round((anoAtual - 1500) / 28)
+	mostra(geracoes)
+
+</script>

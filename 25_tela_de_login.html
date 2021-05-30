@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<script>
+	// Um simulador de login que após 3 tentativas erradas, não permita mais logar.
+
+    var loginCadastrado = "alura";
+    var senhaCadastrada = "alura321";
+
+  	var contador = 1;
+
+    while(contador <= 3){
+	    var loginInformado = prompt("Informe seu login");
+    	var senhaInformada = prompt("Informe sua senha");
+
+	    if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+
+	        alert("Bem-vindo ao sistema " + loginInformado);
+	        contador = 4;
+	    } else {
+
+	        alert("Login inválido. Tente novamente");
+	        contador = contador + 1;
+	    	
+	    	if(contador == 3){	
+	    	
+	    		document.write("Número máximo de tentavias excedidas. Tente novamente mais tarde.")
+			}
+		}
+	}
+</script>

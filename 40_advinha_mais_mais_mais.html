@@ -1,0 +1,74 @@
+<input/>
+<button>Verificar seu nº</button>
+
+<meta charset="UTF-8">
+<script>
+	// Colocar uma caixa texto e um botão para que o usuário insira um nº e verifique se ele acertou ou não. O número que ele deverá adivinhar, estará em uma lista gerada aleatoriamente, de 1 a 10, sem números repetidos e o 0. O tamanho dessa lista será determinado conforme número inserido na variável listaNúmeros.
+
+	function sorteia() {
+
+		return Math.round(Math.random() * 10);
+	}
+
+	function sorteiaNumeros(quantidade) {
+		var contador = 1;
+		var listaNumeros = [];
+		
+		while(contador <= quantidade) { 
+
+			var numeroSorteado = sorteia();
+			var achou = false;
+
+			if(numeroSorteado !== 0){
+
+				for(var contadorDuplicidade = 0; contadorDuplicidade < listaNumeros.length; contadorDuplicidade++) {
+
+					if(listaNumeros[contadorDuplicidade] == numeroSorteado){
+
+						achou = true;
+						break;
+					} 
+				}
+				if(achou == false){
+
+					listaNumeros.push(numeroSorteado);
+					contador++;	
+				}
+			}
+		}
+		return listaNumeros;
+	}
+	
+	var listaNumeros = sorteiaNumeros(3);
+	console.log(listaNumeros);
+
+	var input = document.querySelector("input");
+
+	input.focus();
+
+	function resultado() {
+
+		var achou = false;
+		for(var contador = 0; contador < listaNumeros.length; contador++) {	
+ 
+			if(input.value == listaNumeros[contador]) {
+				
+				alert("Parabéns, você acertou!");
+				achou = true;
+				break;
+			}
+		}
+
+		if(achou == false) {
+
+			alert("Você errou!");
+		}
+
+		input.value = "";
+		input.focus();
+	}
+
+	var button = document.querySelector("button");
+	button.onclick = resultado;
+
+</script>

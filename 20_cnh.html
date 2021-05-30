@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script>
+    // Se a pessoa for maior de 18 anos E tiver CNH, mostrar que ela pode dirigir. Se algum dos critérios não for verdadeiro, ela não poderá dirigir.
+    
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var idade = parseInt(prompt("Qual é sua idade?"));
+    var temCarteira = prompt("Tem carteira? Responda S ou N");
+    
+    if(idade >= 18 && temCarteira == "S"){
+
+    	mostra("Você pode dirigir!")
+    } else {
+
+    	mostra("Você não pode dirigir!")
+    }
+</script>

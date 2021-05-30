@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<script>
+	// Calcular o IMC com base em Altura 1.77 e Peso 75.
+
+	function pulaLinha(){
+		
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function mostra(frase){
+		
+		document.write(frase);
+		pulaLinha();
+	}
+
+    function calculaImc(altura, peso) {
+
+        var imc = peso / (altura * altura);
+        return imc;
+    }
+
+    var imcCalculado = calculaImc(1.77, 75);
+    mostra("O meu IMC é : " + imcCalculado);
+
+
+</script>

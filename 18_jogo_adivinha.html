@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>
+	// Adivinhar o número que o computador pensou de 0 a 10
+
+	function pulaLinha(){
+
+		document.write("<br><br>");
+	}
+
+
+	function mostra(frase){
+
+		document.write(frase);
+		pulaLinha();
+
+	}
+
+	var numeroPensado = Math.round(Math.random() * 10);
+	var chute = parseInt(prompt("Digite seu chute: "));
+
+	if(chute == numeroPensado){
+
+		mostra("Você acertou! O número pensado foi " + numeroPensado);
+	} else {
+
+		mostra("Você errou! O número pensado foi " + numeroPensado)
+	}
+</script>

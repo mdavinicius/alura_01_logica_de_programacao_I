@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<script>
+	// Calcular a média de idade dos familiares.
+
+	function mostra(frase) {
+
+		document.write(frase);
+		document.write("<br><br>");
+	}
+
+	var totalFamiliares = parseInt(prompt("Quantas pessoas tem sua família?"));
+	var totalIdade = 0
+	var contador = 1
+
+	while(contador <= totalFamiliares) {
+
+		var nomeMembros = prompt("Qual o nome da pessoa " + contador + "?");
+		var idadeMembros = parseInt(prompt("Quantos anos tem " + nomeMembros + "?"));
+		var totalIdade = totalIdade + idadeMembros;
+		contador = contador + 1; 
+	}
+	var mediaIdade = totalIdade / totalFamiliares;
+	mostra("Sua familia tem " + totalFamiliares + " pessoas. A média de idade entre vocês é de " + mediaIdade + " anos.");
+
+</script>

@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<script>
+	// Mostrar os anos que tiveram Copa do Mundo a partir do input do usuário, com início da contagem em 1930.
+
+	function pulaLinha(){
+
+		document.write("<br><br>");
+	}
+
+	function mostra(frase){
+
+		document.write(frase);
+		pulaLinha();
+	}
+
+	var anoLimite = parseInt(prompt("Até qual ano gostaria de verificar as Copas do Mundo?"));
+	var anoCopa = 1930;
+
+	while(anoCopa <= anoLimite){
+
+		mostra(anoCopa);
+		anoCopa = anoCopa + 4;
+	}
+
+	mostra("FIM")
+</script>

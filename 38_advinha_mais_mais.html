@@ -1,0 +1,38 @@
+<input/>
+<button>Verificar seu nº</button>
+
+<meta charset="UTF-8">
+<script>
+	// Colocar uma caixa texto e um botão para que o usuário clique e verifique se ele acertou ou não o número escolhido por nós que está em uma lista de opções
+
+	var input = document.querySelector("input");
+	var numerosEscolhidos = [1, 2, 5, 10];
+
+	input.focus();
+
+	function resultado() {
+
+		var achou = false;
+		for(var contador = 0; contador < numerosEscolhidos.length; contador++) {	
+ 
+			if(input.value == numerosEscolhidos[contador]) {
+				
+				alert("Parabéns, você acertou!");
+				achou = true;
+				break;
+			}
+		}
+
+		if(achou == false) {
+
+			alert("Você errou! O número era " + numerosEscolhidos + ".");
+		}
+
+		input.value = "";
+		input.focus();
+	}
+
+	var button = document.querySelector("button");
+	button.onclick = resultado;
+
+</script>

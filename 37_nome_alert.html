@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Exibir texto digitado</button>
+
+<script>
+	// Fazer com que ao clicar no botão, o nome digitado apareça como alerta.
+	
+    var input = document.querySelector("input");
+
+    function exibeTexto() {
+
+    	alert(input.value);
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = exibeTexto;
+</script>
